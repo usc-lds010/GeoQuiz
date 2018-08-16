@@ -16,6 +16,10 @@
             private Button mCheatButton;
             private TextView mQuestionTextView;
 
+            private static final String TAG = "QuizActivity";
+            private static final String KEY_INDEX = "index";
+            private static final int REQUEST_CODE_CHEAT = 0;
+
 
             private Question[] mQuestionBank = new Question[]{
                     new Question(R.string.question_australia, true),
@@ -79,7 +83,7 @@
                     // Start CheatActivity
                     boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
                     Intent intent = CheatActivity.newIntent(QuizActivity.this, answerIsTrue);
-                        startActivity(intent);
+                        startActivityForResult(intent, REQUEST_CODE_CHEAT);
                     }
                 });
 
