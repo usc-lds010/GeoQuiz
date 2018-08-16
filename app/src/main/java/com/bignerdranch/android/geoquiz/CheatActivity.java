@@ -29,6 +29,13 @@ public class CheatActivity extends AppCompatActivity {
         return intent;
     }
 
+    public static boolean wasAnswerShown(Intent result){
+        return result.getBooleanExtra(EXTRA_ANSWER_SHOWN, false);
+    }
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
