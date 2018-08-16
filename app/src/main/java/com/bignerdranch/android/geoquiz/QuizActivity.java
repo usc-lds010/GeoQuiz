@@ -1,6 +1,7 @@
         package com.bignerdranch.android.geoquiz;
 
         import android.content.Context;
+        import android.content.Intent;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.view.View;
@@ -12,6 +13,7 @@
             private Button mTrueButton;
             private Button mFalseButton;
             private Button mNextButton;
+            private Button mCheatButton;
             private TextView mQuestionTextView;
 
 
@@ -27,18 +29,21 @@
             private int mCurrentIndex = 0;
 
             @Override
-
             public void onSaveInstanceState(Bundle savedInstanceState){
                 super.onSaveInstanceState(savedInstanceState);
                 savedInstanceState.putInt("index", mCurrentIndex);
             }
-            
+
 
             protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_quiz);
 
                 mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+
+                if (savedInstanceState != null){
+                    mCurrentIndex = savedInstanceState.getInt("index", 0);
+                }
 
 
                 mTrueButton = (Button) findViewById(R.id.true_button);
@@ -66,6 +71,18 @@
                     updateQuestion();
                 }
                 });
+
+                mCheatButton = (Button)findViewById(R.id.cheat_button);
+                mCheatButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    // Start CheatActivity
+                    boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
+                    Intent intent = CheatActivity.newIntent(QuizActivity.this, answerIsTrue);
+                        startActivity(intent);
+                    }
+                });
+
 
                 updateQuestion();
             }

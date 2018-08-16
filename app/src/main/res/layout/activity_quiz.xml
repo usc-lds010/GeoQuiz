@@ -41,16 +41,25 @@
             tools:layout_editor_absoluteY="278dp" />
 
         <Button
+            android:id="@+id/cheat_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cheat_button"/>
+
+
+        <Button
             android:id="@+id/next_button"
             android:layout_width="86dp"
             android:layout_height="54dp"
             android:layout_weight="1"
             android:text="Next"
             tools:layout_editor_absoluteX="236dp"
-            tools:layout_editor_absoluteY="278dp" />
+            tools:layout_editor_absoluteY="278dp"
+            />
     </LinearLayout>
 
-    <LinearLayout
+
+      <LinearLayout
         android:layout_width="383dp"
         android:layout_height="642dp"
         android:orientation="vertical"
