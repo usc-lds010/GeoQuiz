@@ -26,12 +26,14 @@
 
             private int mCurrentIndex = 0;
 
-
-
-
-
-
             @Override
+
+            public void onSaveInstanceState(Bundle savedInstanceState){
+                super.onSaveInstanceState(savedInstanceState);
+                savedInstanceState.putInt("index", mCurrentIndex);
+            }
+            
+
             protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_quiz);

@@ -7,7 +7,7 @@
     tools:context="com.bignerdranch.android.geoquiz.QuizActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/question_text_view"
         android:layout_width="282dp"
         android:layout_height="27dp"
         android:text="Constantinople is the largest city in Turkey"
@@ -37,6 +37,15 @@
             android:layout_height="54dp"
             android:layout_weight="1"
             android:text="False"
+            tools:layout_editor_absoluteX="236dp"
+            tools:layout_editor_absoluteY="278dp" />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="86dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:text="Next"
             tools:layout_editor_absoluteX="236dp"
             tools:layout_editor_absoluteY="278dp" />
     </LinearLayout>
