@@ -15,11 +15,11 @@
         tools:layout_editor_absoluteY="195dp" />
 
     <LinearLayout
-        android:layout_width="242dp"
-        android:layout_height="57dp"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="267dp">
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="241dp">
 
         <Button
             android:id="@+id/true_button"
@@ -29,7 +29,7 @@
             android:text="True"
             android:textAlignment="center"
             tools:layout_editor_absoluteX="106dp"
-            tools:layout_editor_absoluteY="278dp" />
+            tools:layout_editor_absoluteY="278dp"/>
 
         <Button
             android:id="@+id/false_button"
@@ -38,7 +38,7 @@
             android:layout_weight="1"
             android:text="False"
             tools:layout_editor_absoluteX="236dp"
-            tools:layout_editor_absoluteY="278dp" />
+            tools:layout_editor_absoluteY="278dp"/>
 
         <Button
             android:id="@+id/cheat_button"
@@ -59,11 +59,11 @@
     </LinearLayout>
 
 
-      <LinearLayout
+    <LinearLayout
         android:layout_width="383dp"
         android:layout_height="642dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="-10dp"></LinearLayout>
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="35dp"></LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

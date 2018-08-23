@@ -88,6 +88,7 @@
                 @Override
                 public void onClick(View v){
                     mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+                    mIsCheater = false;
                     updateQuestion();
                 }
                 });
@@ -97,11 +98,9 @@
                     @Override
                     public void onClick(View v) {
                     // Start CheatActivity
-                    /*boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
+                    boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
                     Intent intent = CheatActivity.newIntent(QuizActivity.this, answerIsTrue);
-                        startActivityForResult(intent, REQUEST_CODE_CHEAT);*/
-                    Intent intent = new Intent(QuizActivity.this, CheatActivity.class);
-                        startActivity(intent);
+                        startActivityForResult(intent, REQUEST_CODE_CHEAT);
                     }
                 });
 
@@ -119,14 +118,18 @@
 
                 int messageResId = 0;
 
-                if (userPressedTrue == answerIsTrue){
-                    messageResId = R.string.correct_toast;
+                if (mIsCheater){
+                    messageResId = R.string.judgement_toast;
                 } else{
-                    messageResId = R.string.incorrect_toast;
+                    if (userPressedTrue == answerIsTrue){
+                        messageResId = R.string.correct_toast;
+                    } else{
+                        messageResId = R.string.incorrect_toast;
                 }
 
                 Toast.makeText(this, messageResId, Toast.LENGTH_SHORT)
                         .show();
             }
 
+        }
         }
