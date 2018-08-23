@@ -51,8 +51,8 @@
                     }
                     mIsCheater = CheatActivity.wasAnswerShown(data);
                 }
-            })
             }
+
 
 
             protected void onCreate(Bundle savedInstanceState) {
@@ -97,9 +97,11 @@
                     @Override
                     public void onClick(View v) {
                     // Start CheatActivity
-                    boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
+                    /*boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
                     Intent intent = CheatActivity.newIntent(QuizActivity.this, answerIsTrue);
-                        startActivityForResult(intent, REQUEST_CODE_CHEAT);
+                        startActivityForResult(intent, REQUEST_CODE_CHEAT);*/
+                    Intent intent = new Intent(QuizActivity.this, CheatActivity.class);
+                        startActivity(intent);
                     }
                 });
 
