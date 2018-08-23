@@ -1,44 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bignerdranch.android.geoquiz.QuizActivity">
+    android:gravity="center"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/question_text_view"
-        android:layout_width="282dp"
-        android:layout_height="27dp"
-        android:text="Constantinople is the largest city in Turkey"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="195dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        />
 
     <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="241dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"        >
 
         <Button
             android:id="@+id/true_button"
-            android:layout_width="86dp"
-            android:layout_height="57dp"
-            android:layout_weight="1"
-            android:text="True"
-            android:textAlignment="center"
-            tools:layout_editor_absoluteX="106dp"
-            tools:layout_editor_absoluteY="278dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="True"/>
 
         <Button
             android:id="@+id/false_button"
-            android:layout_width="86dp"
-            android:layout_height="54dp"
-            android:layout_weight="1"
-            android:text="False"
-            tools:layout_editor_absoluteX="236dp"
-            tools:layout_editor_absoluteY="278dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="False"/>
 
         <Button
             android:id="@+id/cheat_button"
@@ -49,21 +38,9 @@
 
         <Button
             android:id="@+id/next_button"
-            android:layout_width="86dp"
-            android:layout_height="54dp"
-            android:layout_weight="1"
-            android:text="Next"
-            tools:layout_editor_absoluteX="236dp"
-            tools:layout_editor_absoluteY="278dp"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"/>
     </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="383dp"
-        android:layout_height="642dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="35dp"></LinearLayout>
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
